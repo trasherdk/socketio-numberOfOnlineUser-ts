@@ -1,14 +1,13 @@
 <div>
-    <p>Number of users : <span id="numberOfUsers"></span></p>
-  </div>
-  <script src="/socket.io/socket.io.js"></script>
-  <script>
-    var socket = io("localhost:3000");
-  
-    var numberOfUsers = document.getElementById("numberOfUsers");
-  
-    socket.on("dataChange", function (data) {
-      numberOfUsers.textContent = data.numberOfUser;
-    });
-  </script>
-  
+  <p>Number of users : <span id="numberOfUsers"></span></p>
+</div>
+<script src="/socket.io/socket.io.js"></script>
+<script>
+  var socket = io("localhost:3000");
+
+  var numberOfUsers = document.getElementById("numberOfUsers");
+
+  socket.on("numberOfUser", function (data) {
+    numberOfUsers.textContent = data;
+  });
+</script>

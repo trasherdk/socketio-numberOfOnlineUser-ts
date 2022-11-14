@@ -15,3 +15,5 @@ npm i
 ```bash
 npm start dev
 ```
+
+Open an explorer on the adress : `localhost:3000`

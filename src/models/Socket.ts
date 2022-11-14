@@ -1,3 +1,3 @@
-export interface SocketData {
-  numberOfUser: number;
+export interface NumberOFUser {
+  data: number;
 }
