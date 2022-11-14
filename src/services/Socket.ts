@@ -27,7 +27,6 @@ export class SocketService {
 
   public listenUserActivity() {
     this.io.on("connection", (client) => {
-      const storeData = this.numberOfUser.getValue();
       // When a user do a connection at our socket, the "connection" event is called. It's a default event from socket.io.
       this.numberOfUser.next({
         data: this.numberOfUser.value.data + 1, // we get the actual value of our "Observable" and
